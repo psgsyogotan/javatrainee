@@ -4,7 +4,8 @@ public class Main {
 		// TODO 自動生成されたメソッド・スタブ
 		Player player = new Player();
 		new GUI();
-		
+		while (true) {
+		}
 
 	}
 
