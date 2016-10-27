@@ -60,10 +60,10 @@ public class GetDateFromCSV2 {
 
 			String[] strArray = line.split(",");
 			// csvファイルは6列目に総合値が入っているのでNumに値を代入
-			int Num = Integer.parseInt(strArray[5]);
+			int Num = Integer.parseInt(strArray[6]);
 
 			// 総合値が指定値以上のとき表示、それ以外のときはやり直し
-			if (Num >= point && position.equals(strArray[4])) {
+			if (Num >= point && position.equals(strArray[5])) {
 				System.out.println(strArray[1]);
 				playername = strArray[1];
 				club = strArray[3];
