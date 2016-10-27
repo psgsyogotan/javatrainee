@@ -18,6 +18,7 @@ public class GetDateFromCSV_b {
 	private int count = 0;
 	private String position;
 	private String playername;
+	private String club;
 
 	public String getPlayername() {
 		return playername;
@@ -75,6 +76,7 @@ public class GetDateFromCSV_b {
 						|| (strArray[4].equals("LWF"))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
+					club = strArray[3];
 
 					input.close();
 					stream.close();
@@ -89,6 +91,7 @@ public class GetDateFromCSV_b {
 						|| (strArray[4].equals("RMF"))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
+					club = strArray[3];
 
 					input.close();
 					stream.close();
@@ -101,6 +104,7 @@ public class GetDateFromCSV_b {
 						|| (strArray[4].equals("CB"))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
+					club = strArray[3];
 
 					input.close();
 					stream.close();
@@ -111,6 +115,7 @@ public class GetDateFromCSV_b {
 				if (Num >= point && (strArray[4].equals("GK"))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
+					club = strArray[3];
 
 					input.close();
 					stream.close();
@@ -121,5 +126,13 @@ public class GetDateFromCSV_b {
 
 		}
 		filereader.close();
+	}
+
+	public String getClub() {
+		return club;
+	}
+
+	public void setClub(String club) {
+		this.club = club;
 	}
 }

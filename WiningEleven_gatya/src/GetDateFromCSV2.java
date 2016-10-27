@@ -12,6 +12,7 @@ public class GetDateFromCSV2 {
 	private int count = 0;
 	private String position;
 	private String playername;
+	private String club;
 
 	public String getPlayername() {
 		return playername;
@@ -65,6 +66,7 @@ public class GetDateFromCSV2 {
 			if (Num >= point && position.equals(strArray[4])) {
 				System.out.println(strArray[1]);
 				playername = strArray[1];
+				club = strArray[3];
 
 				input.close();
 				stream.close();
@@ -73,5 +75,13 @@ public class GetDateFromCSV2 {
 			}
 		}
 		filereader.close();
+	}
+
+	public String getClub() {
+		return club;
+	}
+
+	public void setClub(String club) {
+		this.club = club;
 	}
 }

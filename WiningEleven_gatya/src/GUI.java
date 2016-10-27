@@ -60,6 +60,7 @@ public class GUI extends JFrame implements ActionListener {
 
 			String test = gd.getPlayername();
 			textplayer.setText(gd.getPlayername());
+			textclub.setText(gd.getClub());
 		} else {
 			GetDateFromCSV2 gd = new GetDateFromCSV2();
 
@@ -72,6 +73,7 @@ public class GUI extends JFrame implements ActionListener {
 
 			String test = gd.getPlayername();
 			textplayer.setText(gd.getPlayername());
+			textclub.setText(gd.getClub());
 		}
 
 		// TODO 自動生成されたメソッド・スタブ
