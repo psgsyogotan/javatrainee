@@ -11,7 +11,8 @@ import javax.swing.JTextField;
 public class GUI extends JFrame implements ActionListener {
 
 	String[] Posarray = { "FW", "MF", "DF", "GK", "CF", "ST", "RWF", "LWF",
-			"OMF", "DMF", "CMF", "LMF", "RMF", "CB", "RSB", "LSB" };
+			"OMF", "DMF", "CMF", "LMF", "RMF", "CB", "RSB", "LSB", "CF,ST",
+			"WFW,SHF", "SB", "CB", "GK" };
 	String[] numarray = { "80", "81", "82", "83" };
 	JComboBox combop = new JComboBox(Posarray);
 	JComboBox combon = new JComboBox(numarray);
@@ -47,7 +48,9 @@ public class GUI extends JFrame implements ActionListener {
 		position = (String) combop.getSelectedItem();
 
 		if (position.equals("FW") || position.equals("MF")
-				|| position.equals("DF") || position.equals("GK")) {
+				|| position.equals("DF") || position.equals("GK")
+				|| position.equals("CF,ST") || position.equals("WFW,SHF")
+				|| position.equals("SB")) {
 
 			GetDateFromCSV_b gd = new GetDateFromCSV_b();
 
