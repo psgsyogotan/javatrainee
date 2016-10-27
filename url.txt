@@ -1,0 +1,14 @@
+ASP.NET MVCに関して、
+
+初心者向けサイト：
+http://aspnet.keicode.com/basic/mvc101-index.php
+
+他にも、自分が分かりやすいサイトをググって探してみてください。
+
+英語でいいならMicrosoftのサイトが丁寧です。
+https://www.asp.net/mvc/overview/getting-started/introduction/getting-started
+
+このサイト（http://play.getglimpse.com/）は、
+ここから（https://mvcmusicstore.codeplex.com/）ソースコードがダウンロードでき、自分の環境で実行できます。
+
+※ちなみに、ASP.NET Webフォームは、ASP.NET MVCと別物なので、注意してください。 
