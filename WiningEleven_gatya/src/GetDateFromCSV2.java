@@ -66,7 +66,7 @@ public class GetDateFromCSV2 {
 			if (Num >= point && position.equals(strArray[5])) {
 				System.out.println(strArray[1]);
 				playername = strArray[1];
-				club = strArray[3];
+				club = strArray[8];
 
 				input.close();
 				stream.close();

@@ -66,18 +66,18 @@ public class GetDateFromCSV_b {
 
 			String[] strArray = line.split(",");
 			// csvファイルは6列目に総合値が入っているのでNumに値を代入
-			int Num = Integer.parseInt(strArray[5]);
+			int Num = Integer.parseInt(strArray[6]);
 
 			// 総合値が指定値以上のとき表示、ポジションによってさらに判別
 			if (position.equals("FW")) {
 				if (Num >= point
-						&& ((strArray[4].equals("CF"))
-								|| (strArray[4].equals("ST"))
-								|| (strArray[4].equals("RWF")) 
-								|| (strArray[4].equals("LWF")))) {
+						&& ((strArray[5].equals("CF"))
+								|| (strArray[5].equals("ST"))
+								|| (strArray[5].equals("RWG")) 
+								|| (strArray[5].equals("LWG")))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
-					club = strArray[3];
+					club = strArray[8];
 
 					input.close();
 					stream.close();
@@ -86,14 +86,14 @@ public class GetDateFromCSV_b {
 				}
 			} else if (position.equals("MF")) {
 				if (Num >= point
-						&& ((strArray[4].equals("OMF"))
-								|| (strArray[4].equals("CMF"))
-								|| (strArray[4].equals("DMF"))
-								|| (strArray[4].equals("LMF")) 
-								|| (strArray[4].equals("RMF")))) {
+						&& ((strArray[5].equals("OMF"))
+								|| (strArray[5].equals("CMF"))
+								|| (strArray[5].equals("DMF"))
+								|| (strArray[5].equals("LMF")) 
+								|| (strArray[5].equals("RMF")))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
-					club = strArray[3];
+					club = strArray[8];
 
 					input.close();
 					stream.close();
@@ -102,12 +102,12 @@ public class GetDateFromCSV_b {
 				}
 			} else if (position.equals("DF")) {
 				if (Num >= point
-						&& ((strArray[4].equals("LSB"))
-								|| (strArray[4].equals("RSB")) 
-								|| (strArray[4].equals("CB")))) {
+						&& ((strArray[5].equals("LSB"))
+								|| (strArray[5].equals("RSB")) 
+								|| (strArray[5].equals("CB")))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
-					club = strArray[3];
+					club = strArray[8];
 
 					input.close();
 					stream.close();
@@ -116,26 +116,26 @@ public class GetDateFromCSV_b {
 				}
 			} else if (position.equals("CF,ST")) {
 				if (Num >= point
-						&& ((strArray[4].equals("CF")) 
-								|| (strArray[4].equals("ST")))) {
-					System.out.println(strArray[1]);
+						&& ((strArray[5].equals("CF")) 
+								|| (strArray[5].equals("ST")))) {
+					System.out.println(strArray[5]);
 					playername = strArray[1];
-					club = strArray[3];
+					club = strArray[8];
 
 					input.close();
 					stream.close();
 					br2.close();
 					break;
 				}
-			} else if (position.equals("WFW,SHF")) {
+			} else if (position.equals("WFW,SMF")) {
 				if (Num >= point
-						&& ((strArray[4].equals("RWF"))
-								|| (strArray[4].equals("LWF"))
-								|| (strArray[4].equals("LMF"))
-								|| (strArray[4].equals("RMF")))) {
+						&& ((strArray[5].equals("RWG"))
+								|| (strArray[5].equals("LWG"))
+								|| (strArray[5].equals("LMF"))
+								|| (strArray[5].equals("RMF")))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
-					club = strArray[3];
+					club = strArray[8];
 
 					input.close();
 					stream.close();
@@ -145,11 +145,11 @@ public class GetDateFromCSV_b {
 			}
 			else if (position.equals("SB")) {
 				if (Num >= point
-						&& ((strArray[4].equals("RSB"))
-								|| (strArray[4].equals("LSB")))) {
+						&& ((strArray[5].equals("RSB"))
+								|| (strArray[5].equals("LSB")))) {
 					System.out.println(strArray[1]);
 					playername = strArray[1];
-					club = strArray[3];
+					club = strArray[8];
 
 					input.close();
 					stream.close();
@@ -159,10 +159,10 @@ public class GetDateFromCSV_b {
 			}
 
 			else {
-				if (Num >= point && (strArray[4].equals("GK"))) {
-					System.out.println(strArray[1]);
+				if (Num >= point && (strArray[5].equals("GK"))) {
+					System.out.println(strArray[5]);
 					playername = strArray[1];
-					club = strArray[3];
+					club = strArray[8];
 
 					input.close();
 					stream.close();

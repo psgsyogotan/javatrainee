@@ -10,9 +10,9 @@ import javax.swing.JTextField;
 
 public class GUI extends JFrame implements ActionListener {
 
-	String[] Posarray = { "FW", "MF", "DF", "GK", "CF", "ST", "RWF", "LWF",
+	String[] Posarray = { "FW", "MF", "DF", "GK", "CF", "ST", "RWG", "LWG",
 			"OMF", "DMF", "CMF", "LMF", "RMF", "CB", "RSB", "LSB", "CF,ST",
-			"WFW,SHF", "SB", "CB", "GK" };
+			"WFW,SMF", "SB", "CB", "GK" };
 	String[] numarray = { "80", "81", "82", "83" };
 	JComboBox combop = new JComboBox(Posarray);
 	JComboBox combon = new JComboBox(numarray);
@@ -35,7 +35,7 @@ public class GUI extends JFrame implements ActionListener {
 		button.addActionListener(this);
 		this.container.add(textplayer, BorderLayout.PAGE_END);
 		this.container.add(textclub, BorderLayout.NORTH);
-		this.setBounds(0, 0, 200, 150);
+		this.setBounds(0, 0, 400, 200);
 		;
 		this.setVisible(true);
 
@@ -49,7 +49,7 @@ public class GUI extends JFrame implements ActionListener {
 
 		if (position.equals("FW") || position.equals("MF")
 				|| position.equals("DF") || position.equals("GK")
-				|| position.equals("CF,ST") || position.equals("WFW,SHF")
+				|| position.equals("CF,ST") || position.equals("WFW,SMF")
 				|| position.equals("SB")) {
 
 			GetDateFromCSV_b gd = new GetDateFromCSV_b();
